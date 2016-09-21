@@ -11,7 +11,7 @@ Product.create!(title: 'Version Control with Git',
         rigorous advice for navigating the many functions of this open
         source version control system.
       </p>},
-  image_url: 'git.jpg',    
+  image_url: 'depot/app/assets/images/git.jpg',    
   price: 23.96)
 
 Product.create!(title: 'Programming Ruby 1.9 & 2.0',
