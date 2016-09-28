@@ -15,7 +15,7 @@ class ProductsControllerTest < ActionController::TestCase
     get :new
     assert_response :success
   end
-#There is something strange going on here
+
   test "should create product" do
     assert_difference('Product.count') do
       post :create, product: { description: @product.description, image_url: @product.image_url, price: @product.price, title: "New Book" }
