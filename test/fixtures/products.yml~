@@ -3,5 +3,10 @@ one:
   title: MyStringOne
   description: MyTextOne
   image_url: hey.jpg
-  price: 21.00
+  price: 100
 
+two:
+  title: MyStringTwo
+  description: MyTextTwo
+  image_url: hello.jpg
+  price: 20.00

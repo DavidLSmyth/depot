@@ -3,10 +3,19 @@ one:
   title: MyStringOne
   description: MyTextOne
   image_url: hey.jpg
-  price: 21.00
+  price: 100
 
 two:
   title: MyStringTwo
   description: MyTextTwo
   image_url: hello.jpg
   price: 20.00
+
+ruby:
+  title: Programming Ruby 1.9 & 2.0
+  description:
+    Ruby is the fastest growing and most exciting dynamic language
+    out there. If you need to get working programs delivered fast,
+    you should add Ruby to your toolbox.
+  image_url: ruby.jpg
+  price: 49.95
