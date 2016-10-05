@@ -37,7 +37,7 @@
   background: #141;
 
   #main {
-    margin-left: 17em;
+    margin-left: 19em;
     padding: 1em;
     background: white;
   }
@@ -60,4 +60,13 @@
       }
     }
   }
+	#DateTime {
+	font-family: Rockwell,Courier Bold,Courier,Georgia,Times,Times New Roman,serif;
+	font-size: 14px;
+	font-style: normal;
+	font-variant: normal;
+	font-weight: 400;
+	line-height: 20px;
+	white-space: nowrap;
+	}
 }

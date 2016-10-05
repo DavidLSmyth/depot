@@ -14,16 +14,19 @@
 	</div>
   <div id="columns">
   <div id="side">
-    <ul>
+   <ul>
 	<li><a href="http://www....">Home</a></li>
 	<li><a href="http://www..../faq">Questions</a></li>
 	<li><a href="http://www..../news">News</a></li>
 	<li><a href="http://www..../contact">Contact</a></li>
-    </ul>
+	</ul>
+	<span id='DateTime'>The time is:
+		<%= Time.now.strftime("%H:%M") %>
+	</span>
+	<span id='DateTime'>The date is: 
+		<%= Time.now.strftime("%d/%m/%Y") %>
+	</span>
   </div>
-  <div id="lower side"> 
-		<p>The time is: </p>
-	</div>
   <div id="main">
     <%= yield %>
   </div>

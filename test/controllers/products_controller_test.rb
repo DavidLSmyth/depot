@@ -13,6 +13,7 @@ class ProductsControllerTest < ActionController::TestCase
 		assert_select '#main .entry', 3
 		assert_select 'h3', 'Book1'
 		assert_select '.price', /\$[,\d]+\.\d\d/
+		assert_select '#columns #
   end
 
   test "should get new" do
