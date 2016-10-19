@@ -7,6 +7,6 @@ table {
 tr {
 	height: 80px;
   padding: 50px;
-  vertical-align: middle;
+  vertical-align: top;
   border-bottom: dotted 1px black;
 }

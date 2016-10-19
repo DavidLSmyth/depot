@@ -15,7 +15,7 @@
 	</tr>
 	<% end %>
 	<tr><td><h3><strong>Number of items in cart: </strong><%= productCount %></h3></td>
-	<td><h3><strong>Total Price: </strong>$<%= runningTotal %></h3></td>
+	<td><strong>Total Price: </strong>$<%= runningTotal %></td>
 </table>
 <%= link_to 'Edit', edit_cart_path(@cart) %> |
 <%= link_to 'Back', carts_path %>
