@@ -7,20 +7,18 @@ class ProductsControllerTest < ActionController::TestCase
 
   test "should get index" do
     get :index
-    assert_response :success
     assert_not_nil assigns(:products)
+		assert_response :success
 		assert_select '#columns #side a', minimum: 4
-		assert_select '#main .entry', 3
-		assert_select 'h3', 'Book1'
-		assert_select '.price', /\$[,\d]+\.\d\d/
-		assert_select '#columns #
+		#assert_select '#column #main .entry', minimum: 3
+		#assert_select '.price', /\$[,\d]+\.\d\d/
+		assert_select '#columns #side #DateTime', minimum:2
   end
 
   test "should get new" do
     get :new
     assert_response :success
   end
-#There is something strange going on here
   test "should create product" do
     assert_difference('Product.count') do
       post :create, product: { description: @product.description, image_url: @product.image_url, price: @product.price, title: "New Book" }
