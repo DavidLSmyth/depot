@@ -15,15 +15,15 @@
   <div id="columns">
   <div id="side">
    <ul>
-	<li><a href="http://www....">Home</a></li>
+	<li><%= link_to 'Item Listing', products_path %></li>
 	<li><a href="http://www..../faq">Questions</a></li>
 	<li><a href="http://www..../news">News</a></li>
 	<li><a href="http://www..../contact">Contact</a></li>
 	</ul>
-	<span id='DateTime'>The time is:
+	<span id='DateTime' class="nowrap">The time is:
 		<%= Time.now.strftime("%H:%M") %>
 	</span>
-	<span id='DateTime'>The date is: 
+	<span id='DateTime' class="nowrap">The date is: 
 		<%= Time.now.strftime("%d/%m/%Y") %>
 	</span>
   </div>

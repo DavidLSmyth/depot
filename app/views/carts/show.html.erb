@@ -10,6 +10,7 @@
 	<tr>
   <td><strong><%= item.product.title %></strong></td>
   <td>Price: $<%= item.product.price %></td>
+	<td><%= button_to 'Remove From Cart',  item, :method => :delete%></td>
 	<% runningTotal=runningTotal+item.product.price %>
 	<% productCount=productCount+1 %>
 	</tr>

@@ -10,12 +10,13 @@
 	<tr>
   <td><strong><%= item.product.title %></strong></td>
   <td>Price: $<%= item.product.price %></td>
+	<td><%= button_to 'Remove From Cart',  item.product, :method => :delete%></td>
 	<% runningTotal=runningTotal+item.product.price %>
 	<% productCount=productCount+1 %>
 	</tr>
 	<% end %>
 	<tr><td><h3><strong>Number of items in cart: </strong><%= productCount %></h3></td>
-	<td><strong>Total Price: </strong>$<%= runningTotal %></td>
+	<td><h3><strong>Total Price: </strong>$<%= runningTotal %></h3></td>
 </table>
 <%= link_to 'Edit', edit_cart_path(@cart) %> |
 <%= link_to 'Back', carts_path %>
