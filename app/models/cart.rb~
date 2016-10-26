@@ -10,4 +10,10 @@ class Cart < ActiveRecord::Base
 		end
 		current_item
 	end
+
+	#def decreaseQuantity(line_item)
+	#	current_item = line_items.find_by(product_id: product_id)
+	#	line_item
+	#end
+
 end
