@@ -15,7 +15,7 @@
   <div id="columns">
   <div id="side">
    <ul>
-	<li><%= link_to 'Item Listing', products_path %></li>
+	<li><%= link_to 'Item Listing', store_path %></li>
 	<li><a href="http://www..../faq">Questions</a></li>
 	<li><a href="http://www..../news">News</a></li>
 	<li><a href="http://www..../contact">Contact</a></li>

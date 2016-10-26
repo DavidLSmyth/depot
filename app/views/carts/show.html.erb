@@ -1,24 +1,26 @@
 <p id="notice"><%= notice %></p>
 
 <h2>Your Current Cart: </h2>
-<table>
+	<table>
 	<col width="300">
 	<col width="150">
 	<% runningTotal=0 %>
 	<% productCount=0 %>
 	<%= @cart.line_items.each do |item| %>
 	<tr>
-  <td><strong><%= item.product.title %></strong></td>
-  <td>Price: $<%= item.product.price %></td>
-	<td><%= button_to 'Remove From Cart',  item, :method => :delete%></td>
-	<% runningTotal=runningTotal+item.product.price %>
-	<% productCount=productCount+1 %>
+  	<td><strong><%= item.product.title %> &times;<%= item.quantity %> </strong></td>
+  	<td>Price: $<%= item.product.price %></td>
+		<td>quantity<%= item.quantity %></td>
+		<td><%= link_to 'remove', edit_line_item_path(:id => item.id, :id1 => item.product.id) %></td>
+		<% runningTotal=runningTotal+((item.product.price)*(item.quantity)) %>
+		<=% productCount=productCount+item.quantity %>
 	</tr>
 	<% end %>
 	<tr><td><h3><strong>Number of items in cart: </strong><%= productCount %></h3></td>
 	<td><h3><strong>Total Price: </strong>$<%= runningTotal %></h3></td>
 </table>
 <%= link_to 'Edit', edit_cart_path(@cart) %> |
-<%= link_to 'Back', carts_path %>
+<%= link_to 'Back', store_path %>
+
 
 	

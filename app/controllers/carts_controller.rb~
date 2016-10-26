@@ -19,13 +19,13 @@ class CartsController < ApplicationController
 
   # GET /carts/1/edit
   def edit
-  	#item = @cart.line_items.find(params[:id1])
-    #if(item.quantity>1)
-		#	@cart.line_items.index(item)=@cart.decreaseQuantity(item)
-		#else
-		#	@cart.line_items.delete item
-		#end
-   	#redirect_to @cart
+  	item = @cart.line_items.find(params[:id1])
+    if(item.quantity>1)
+			@cart.line_items.index(item)=@cart.decreaseQuantity(item)
+		else
+			@cart.line_items.delete item
+		end
+   	redirect_to @cart
  	end
 
   # POST /carts
