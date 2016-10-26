@@ -16,9 +16,9 @@
   <div id="side">
    <ul>
 	<li><%= link_to 'Item Listing', store_path %></li>
-	<li><a href="http://www..../faq">Questions</a></li>
-	<li><a href="http://www..../news">News</a></li>
-	<li><a href="http://www..../contact">Contact</a></li>
+	<li><%= link_to 'News', store_path %></li>
+	<li><%= link_to 'About', store_path %></li>
+	<li><%= link_to 'Contact', store_path %></li>
 	</ul>
 	<span id='DateTime' class="nowrap">The time is:
 		<%= Time.now.strftime("%H:%M") %>
@@ -26,6 +26,11 @@
 	<span id='DateTime' class="nowrap">The date is: 
 		<%= Time.now.strftime("%d/%m/%Y") %>
 	</span>
+	<% if @cart %>
+	  <div id="cart">
+	    <%= render @cart %>
+	  </div>
+	<% end %>
   </div>
   <div id="main">
     <%= yield %>

@@ -26,6 +26,11 @@
 	<span id='DateTime' class="nowrap">The date is: 
 		<%= Time.now.strftime("%d/%m/%Y") %>
 	</span>
+	<% if @cart %>
+	  <div id="cart">
+	    <%= render @cart %>
+	  </div>
+	<% end %>
   </div>
   <div id="main">
     <%= yield %>

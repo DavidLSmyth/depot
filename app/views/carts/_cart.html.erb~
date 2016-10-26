@@ -1,0 +1,17 @@
+<h2>Your Cart</h2>
+<table>
+  <%= render cart.line_items %>
+    <tr>
+			<td><%= button_to 'Empty cart', cart, method: :delete,
+      data: { confirm: 'Are you sure?' } %></td>
+    </tr>
+
+  <tr height: 10px;>
+    <td height: 10px;>Cart Size:</td>
+    <td height: 10px;>Total: </td>
+	</tr>
+	<tr class="total_line">
+ 		 <td class="quantity"><%= cart.line_items.map(&:quantity).sum() %></td>
+			<td class="total_cell"><%= number_to_currency(cart.total_price) %></td>
+	</tr>
+</table>

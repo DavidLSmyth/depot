@@ -1,6 +1,7 @@
 // Place all the styles related to the carts controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/.products {
+
 table {
   border-collapse: collapse;
 }
@@ -9,4 +10,17 @@ tr {
   padding: 50px;
   vertical-align: middle;
   border-bottom: dotted 1px black;
+}
+.carts, #side #cart { {
+  .item_price {
+    text-align: right;
+  }
+	.quantity{
+		text-align: left;	
+	}
+
+  .total_line, .total_cell {
+    font-weight: bold;
+    border-top: 1px solid #595;
+  }
 }
