@@ -4,11 +4,12 @@
     <tr>
 			<td><%= button_to 'Empty cart', cart, method: :delete,
       data: { confirm: 'Are you sure?' } %></td>
+			<td><%= button_to "Checkout", new_order_path, method: :get %></td>
     </tr>
 
-  <tr height: 10px;>
-    <td height: 10px;>Cart Size:</td>
-    <td height: 10px;>Total: </td>
+  <tr>
+    <td>Cart Size:</td>
+    <td>Total: </td>
 	</tr>
 	<tr class="total_line">
  		 <td class="quantity"><%= cart.line_items.map(&:quantity).sum() %></td>
