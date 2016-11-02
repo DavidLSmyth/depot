@@ -21,7 +21,7 @@ class CartsControllerTest < ActionController::TestCase
       post :create, cart: {  }
     end
 
-    assert_redirected_to cart_path(assigns(:cart))
+    assert_redirected_to store_url(assigns(:cart))
   end
 
   test "should show cart" do
@@ -36,7 +36,7 @@ class CartsControllerTest < ActionController::TestCase
 
   test "should update cart" do
     patch :update, id: @cart, cart: {  }
-    assert_redirected_to cart_path(assigns(:cart))
+    assert_redirected_to store_url(assigns(:cart))
   end
 
   test "should destroy cart" do
