@@ -6,6 +6,16 @@
   <%= javascript_include_tag 'application', 'data-turbolinks-track' => true %>
   <%= csrf_meta_tags %>
 </head>
+
+<% if session[:user_id] %>
+  <br />
+  <%= link_to 'Orders',   orders_path   %><br />
+  <%= link_to 'Products', products_path %><br />
+  <%= link_to 'Users',    users_path    %><br />
+  <br />
+  <%= button_to 'Logout', logout_path, :method => :delete   %>
+<% end %>
+
 <body>
 <%= content_tag :body, class: controller.controller_name do %>
 	<div id="banner">
@@ -29,8 +39,8 @@
 	<% if @cart %>
 	  <div id="cart">
 	    <%= hidden_div_if(@cart.line_items.empty?, id: 'cart') do %>
-  <%= render @cart %>
-<% end %>
+ 			<%= render @cart %>
+			<% end %>
 	  </div>
 	<% end %>
   </div>
